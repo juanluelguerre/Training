@@ -2,7 +2,3 @@
 http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
 - PuTTY
 - PuTTYGen
-
-
-
-aelinux1.westeurope.cloudapp.azure.com
