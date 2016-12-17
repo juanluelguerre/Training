@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ContactListConsoleApp;
 using Microsoft.Azure.WebJobs;
+using System;
+using System.Configuration;
+using System.Linq;
 
 namespace ApiContactListWebJob
 {
@@ -21,9 +20,31 @@ namespace ApiContactListWebJob
                 config.UseDevelopmentSettings();
             }
 
-            var host = new JobHost();
-            // The following code ensures that the WebJob will be running continuously
-            host.RunAndBlock();
+
+            CreateOneContact();
+
+
+            //var host = new JobHost();
+            //// The following code ensures that the WebJob will be running continuously
+            //host.RunAndBlock();
+        }
+
+        public static void CreateOneContact()
+        {
+            var contactListClient = new DotNetQuickStart(
+                new Uri(ConfigurationManager.AppSettings["API_APP_BASE_URI"])
+                );
+            
+            var contacts = contactListClient.Contacts.Get().OrderByDescending(c => c.Id);
+            int? maxId = contacts.FirstOrDefault().Id;
+
+            contactListClient.Contacts.PostByContact(new ContactListConsoleApp.Models.Contact()
+            {
+                Id = ++maxId,
+                EmailAddress = "jlguerrero@gmail.com",
+                Name = String.Concat("Name_", Guid.NewGuid().ToString("N"))
+            });
+
         }
     }
 }

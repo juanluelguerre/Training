@@ -1,0 +1,15 @@
+
+1) Crear una máquina virtual Linux (Ubuntú)
+	2) Utilizar PuTTYgen para obtener una clarve SSH (2048)
+	3) Establecer los valores de red por defecto, mostrarndo el rango de IP que se tendrán disponibles por subred….
+	4) Conexión con la VM
+		5) Utilizar PuTTY y en Conextion – SSH – Auth à Cargar la clave privada (.ppk)
+		6) Instalar Ubutu Desktop: https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-linux-classic-remote-desktop 
+				7) #sudo apt-get update 
+				8) #sudo apt-get install xrdp
+				9) #sudo apt-get install xfce4
+				10) #echo xfce4-session >~/.xsession
+				11) #sudo vi /etc/xrdp/startwm.sh 
+				12) Añadir la línea “xfce4-session” delante de la línea  “/etc/X11/Xsession” [Recordar: ESC + :wq  para guarder cambios en “vi”]
+				13) #sudo service xrdp restart 
+				14) #sudo passwd <usuario> [Para establecer el password si utilizamos la conexión via SSH. Ubuntú no necesita password para el root, pero si necesitamos una para la conexón xrdp]. [Ojo con los caracteres de XRDP]

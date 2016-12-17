@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiContactListWebJob", "Api
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetQuickStart", "DotNetQuickStart\DotNetQuickStart.csproj", "{49AE21E8-F089-40FD-8265-4745DA834BFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJobjuanlu", "WebJobjuanlu\WebJobjuanlu.csproj", "{3A99F47F-EA66-4616-A55A-E49CCCEAC634}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{49AE21E8-F089-40FD-8265-4745DA834BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49AE21E8-F089-40FD-8265-4745DA834BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49AE21E8-F089-40FD-8265-4745DA834BFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A99F47F-EA66-4616-A55A-E49CCCEAC634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A99F47F-EA66-4616-A55A-E49CCCEAC634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A99F47F-EA66-4616-A55A-E49CCCEAC634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A99F47F-EA66-4616-A55A-E49CCCEAC634}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
