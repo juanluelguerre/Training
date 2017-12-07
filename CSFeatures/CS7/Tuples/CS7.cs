@@ -15,24 +15,24 @@ namespace FeatruesCS7
             WriteLine();
 
             // 1)
-            // var letters = new System.ValueTuple<string, string, string>("a", "b", "c", "d");
-            var letters = ("a", "b", "c", "d");
+            //var letters = new System.ValueTuple<string, string, string>("a", "b", "c");
+            var letters = ("a", "b", "c");
             WriteLine($"{letters.Item1}, {letters.Item2}, ....");
 
             // 2)
             (string Alpha, string Beta) namedLetters = ("a", "b");
-            WriteLine($"{namedLetters.Alpha}, {namedLetters.Item2}, ....");
+            WriteLine($"{namedLetters.Alpha}, {namedLetters.Beta}, ....");
 
             // 3)
             var alphabetStart = (Alpha: "a", Beta: "b");
-            WriteLine($"{alphabetStart.Alpha}, {alphabetStart.Item2}, ....");
+            WriteLine($"{alphabetStart.Alpha}, {alphabetStart.Beta}, ....");
 
             // 4)
             (string First, string Second) firstLetters = (Alpha: "a", Beta: "b");
-            WriteLine($"{firstLetters.First}, {firstLetters.Item2}, ....");
+            WriteLine($"{firstLetters.First}, {firstLetters.Second}, ....");
 
             // 5) Practical sample
-            var numbers = new int[] { 1,2, 5, 8, 99, 13, 15, 4, 7 };
+            var numbers = new int[] { 1, 2, 5, 8, 99, 13, 15, 4, 7 };
             var (min, max) = Range(numbers);
             WriteLine($"[{min}, {max}]");
 

@@ -21,8 +21,12 @@
 //            WriteLine(indices);
 
 //            matrix[indices.Item1, indices.Item2] = 24;
-//            MatrixFind(matrix, (val) => val == 42); // Chage value doesn't work properly
-//            WriteLine(indices);
+//            indices = MatrixFind(matrix, (val) => val == 42);
+//            if (indices.Item1 != -1 && indices.Item2 != -1)
+//                WriteLine($"{indices} = { matrix[indices.Item1, indices.Item2]}");
+//            else
+//                WriteLine("Not found!");
+
 
 //            WriteLine("Pulse INTRO para finalizar...");
 //            ReadLine();

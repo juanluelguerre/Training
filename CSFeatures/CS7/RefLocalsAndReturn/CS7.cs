@@ -23,14 +23,17 @@ namespace FeatruesCS7
 
             //Changing value
             matrix[indices.i, indices.j] = 35;
-            MatrixFind(matrix, (val) => val == 35); // Change value doesn't work properly
-            WriteLine($"{indices} = { matrix[indices.i, indices.j]}");
+            indices = MatrixFind(matrix, (val) => val == 42); // Change value doesn't work properly. Not found !
+            if (indices.i != -1 && indices.j != -1)
+                WriteLine($"{indices} = { matrix[indices.i, indices.j]}");
+            else
+                WriteLine("Not found!");
 
 
             WriteLine("--- Matrix 2 ---");
             var valItem2 = MatrixFindValue(matrix, (val) => val == 35);
             WriteLine($"Value: {valItem2}");
-            valItem2 = 24; 
+            valItem2 = 24;
             WriteLine($"Matrix Value: {matrix[1, 1]}");
 
 
