@@ -23,15 +23,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Part I", "Part I", "{A23252
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Part II", "Part II", "{789F4A5B-C8BE-489B-A1AD-50EED91A356E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-LocalFunctions", "6-LocalFunctions\06-LocalFunctions.csproj", "{A488C33A-4F75-4220-8967-69A03FCF834B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06-LocalFunctions", "6-LocalFunctions\06-LocalFunctions.csproj", "{A488C33A-4F75-4220-8967-69A03FCF834B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-ExpressionBodiedMembersII", "7-ExpressionBodiedMembersII\07-ExpressionBodiedMembersII.csproj", "{29D2AD45-B2DB-4185-8D7F-3D0CD40D1D68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07-ExpressionBodiedMembersII", "7-ExpressionBodiedMembersII\07-ExpressionBodiedMembersII.csproj", "{29D2AD45-B2DB-4185-8D7F-3D0CD40D1D68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08-ThrowExpresions", "8-ThrowExpresions\08-ThrowExpresions.csproj", "{82A54F77-68E1-43CA-9C00-8C9F84BF4D9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08-ThrowExpresions", "8-ThrowExpresions\08-ThrowExpresions.csproj", "{82A54F77-68E1-43CA-9C00-8C9F84BF4D9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09-GeneralizedAsyncReturnTypes", "9-GeneralizedAsyncReturnTypes\09-GeneralizedAsyncReturnTypes.csproj", "{E8A94536-76D7-48FF-9DAA-35157C660AA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09-GeneralizedAsyncReturnTypes", "9-GeneralizedAsyncReturnTypes\09-GeneralizedAsyncReturnTypes.csproj", "{E8A94536-76D7-48FF-9DAA-35157C660AA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10-NumericLiteralSyntaxImprovements", "10-NumericLiteralSyntaxImprovements\10-NumericLiteralSyntaxImprovements.csproj", "{FBFEFAC4-9595-40BC-A90A-F7EB31836908}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10-NumericLiteralSyntaxImprovements", "10-NumericLiteralSyntaxImprovements\10-NumericLiteralSyntaxImprovements.csproj", "{FBFEFAC4-9595-40BC-A90A-F7EB31836908}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
