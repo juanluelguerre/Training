@@ -1,21 +1,15 @@
 ﻿////
-//// Samples from: https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7
+//// Samples from: https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-1
 ////
 //using static System.Console;
 
 //namespace FeatruesCS7
 //{
-//    class CS7
+//    public class CS7
 //    {
-//        static void Main(string[] args)
+//        public static void Main(string[] args)
 //        {
-//            string strArgument = "123";
-
-//            if (int.TryParse(strArgument, out int numericResult))
-//                WriteLine(numericResult);
-//            else
-//                WriteLine("Could not parse input");
-
+//            WriteLine("--- Async Main Method ---");
 //            WriteLine("Pulse INTRO para finalizar...");
 //            ReadLine();
 //        }

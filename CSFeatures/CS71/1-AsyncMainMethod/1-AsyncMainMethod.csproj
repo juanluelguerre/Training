@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <RootNamespace>FeatruesCS7</RootNamespace>
     <AssemblyName>OutVariables</AssemblyName>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
 </Project>
