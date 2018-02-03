@@ -4,7 +4,7 @@
 using System.Threading.Tasks;
 using static System.Console;
 
-namespace FeatruesCS7
+namespace FeatruesCS71
 {
     public class CS71
     {        
@@ -13,9 +13,10 @@ namespace FeatruesCS7
         public static async Task Main(string[] args)
         {
             WriteLine("--- Async Main Method CS 7.1 ---");
-            WriteLine("Pulse INTRO para finalizar...");
-
+           
             await Task.CompletedTask;
+
+            WriteLine("Pulse INTRO para finalizar...");
             ReadLine();
         }
     }
