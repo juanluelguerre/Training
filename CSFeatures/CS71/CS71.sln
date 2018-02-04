@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-AsyncMainMethod", "1-AsyncMainMethod\1-AsyncMainMethod.csproj", "{99881506-DA67-45F4-ABBE-B0EEB2D06012}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2-DefaultLiteralExpressions", "2-DefaultLiteralExpressions\2-DefaultLiteralExpressions.csproj", "{92B08416-D395-4FCE-AA12-D31EF1C9CB87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-InferredTupleElementNames", "3-InferredTupleEementNames\3-InferredTupleElementNames.csproj", "{BC59F418-0FCC-4DDD-95E3-5D82DECE2EA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99881506-DA67-45F4-ABBE-B0EEB2D06012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99881506-DA67-45F4-ABBE-B0EEB2D06012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99881506-DA67-45F4-ABBE-B0EEB2D06012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99881506-DA67-45F4-ABBE-B0EEB2D06012}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92B08416-D395-4FCE-AA12-D31EF1C9CB87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92B08416-D395-4FCE-AA12-D31EF1C9CB87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92B08416-D395-4FCE-AA12-D31EF1C9CB87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92B08416-D395-4FCE-AA12-D31EF1C9CB87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC59F418-0FCC-4DDD-95E3-5D82DECE2EA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC59F418-0FCC-4DDD-95E3-5D82DECE2EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC59F418-0FCC-4DDD-95E3-5D82DECE2EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC59F418-0FCC-4DDD-95E3-5D82DECE2EA2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
