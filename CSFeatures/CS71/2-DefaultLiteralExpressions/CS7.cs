@@ -12,7 +12,7 @@ namespace FeatruesCS71
             var s = default(string);
             var d = default(dynamic);
             var i = default(int);
-            var n = default(int?);
+            var n = default(in  t?);
             GenericList<int> list = default(GenericList<int>);
             var list2 = default(GenericList<int>);
 
