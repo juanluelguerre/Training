@@ -23,7 +23,6 @@ namespace FeatruesCS71
             Func<string, bool> where = default;
 
 
-
             // (2) default VS default(T) VS default !!!!
             var test1 = 1;
             switch (test1)

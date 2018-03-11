@@ -17,9 +17,21 @@
 //                Description = "New Features C#6"
 //            };
 
+//            //
+//            // 1) What happend if "Title" literal change ?
+//            //
 //            System.Console.WriteLine("Id: {0} - Title: {1}", p.Id, p.Title);
 //            System.Console.WriteLine("Pulse INTRO para finalizar...");
 //            System.Console.ReadLine();
+
+
+//            var list = new List<string>();
+//            list.Add("Uno");
+//            list.Add("Dis");
+
+
+
+
 //        }
 //    }
 //}
