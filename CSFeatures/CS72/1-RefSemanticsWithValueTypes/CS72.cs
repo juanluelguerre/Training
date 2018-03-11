@@ -27,17 +27,36 @@ namespace FeatruesCS72
                 Console.WriteLine($"Total Point: {pTotal.X}-{pTotal.Y}");
             }
 
-            //var pp = CalculatePoint(p1, p2);
+            CalculatePoint(p1, p2);
 
-            Console.WriteLine("Pulse INTRO para finalizar...");
+            Console.WriteLine("Press ENTER to finalize...");
             Console.ReadLine();
         }
 
-        static bool TryCalculate(int a, int b, out int total)
+        //
+        // 1) "in". As Readonly parameters
+        //
+        static bool TryCalculate(in int a, in int b, out int total)
         {
+            // a = a + 1;
+            // b = b + 1;
             total = a + b;
             return true;
         }
+
+        static int _total;
+
+        //
+        // 2) "ref readonly"
+        //
+        static ref readonly int TryCalculate2(ref int a, ref int b)
+        {
+            a = a + 1;
+            b = b + 1;
+            _total = a + b;
+            return ref _total;
+        }
+
 
         static bool TryCalculatePoint(Point a, Point b, ref Point total)
         {

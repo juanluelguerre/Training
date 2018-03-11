@@ -1,13 +1,18 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-RefSemanticsWithValueTypes", "1-RefSemanticsWithValueTypes\1-RefSemanticsWithValueTypes.csproj", "{4153BE16-4717-4046-8E7F-A5CA65F3D329}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1-RefSemanticsWithValueTypes", "1-RefSemanticsWithValueTypes\1-RefSemanticsWithValueTypes.csproj", "{4153BE16-4717-4046-8E7F-A5CA65F3D329}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2-NonTrailingNamedArgs", "2-NonTrailingNamedArgs\2-NonTrailingNamedArgs.csproj", "{7B941134-C096-4C9A-990F-3A85BA26ED8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2-NonTrailingNamedArgs", "2-NonTrailingNamedArgs\2-NonTrailingNamedArgs.csproj", "{7B941134-C096-4C9A-990F-3A85BA26ED8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-LeadingUnderscoresInNumericLiterals", "3-LeadingUnderscoresInNumericLiterals\3-LeadingUnderscoresInNumericLiterals.csproj", "{D511892C-4657-4FA5-AB51-27587001CAAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3-LeadingUnderscoresInNumericLiterals", "3-LeadingUnderscoresInNumericLiterals\3-LeadingUnderscoresInNumericLiterals.csproj", "{D511892C-4657-4FA5-AB51-27587001CAAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-PrivateProtectedAccessModifier", "4-PrivateProtectedAccessModifier\4-PrivateProtectedAccessModifier.csproj", "{00AFFEA0-D6E9-43E7-B49C-D4AF5538F88E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4-PrivateProtectedAccessModifier", "4-PrivateProtectedAccessModifier\4-PrivateProtectedAccessModifier.csproj", "{00AFFEA0-D6E9-43E7-B49C-D4AF5538F88E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\Inheritance.csproj", "{ABE22AEE-0D28-4F27-9AF0-7FFE018DD01A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 Private Protected Access Modifier", "4 Private Protected Access Modifier", "{1DB81A64-ADEF-45E1-93DE-BCA160A468E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,5 +36,19 @@ Global
 		{00AFFEA0-D6E9-43E7-B49C-D4AF5538F88E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00AFFEA0-D6E9-43E7-B49C-D4AF5538F88E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00AFFEA0-D6E9-43E7-B49C-D4AF5538F88E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABE22AEE-0D28-4F27-9AF0-7FFE018DD01A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABE22AEE-0D28-4F27-9AF0-7FFE018DD01A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABE22AEE-0D28-4F27-9AF0-7FFE018DD01A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABE22AEE-0D28-4F27-9AF0-7FFE018DD01A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{00AFFEA0-D6E9-43E7-B49C-D4AF5538F88E} = {1DB81A64-ADEF-45E1-93DE-BCA160A468E2}
+		{ABE22AEE-0D28-4F27-9AF0-7FFE018DD01A} = {1DB81A64-ADEF-45E1-93DE-BCA160A468E2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08A74D12-C941-4DB7-A554-E2D0CB0C6E13}
 	EndGlobalSection
 EndGlobal

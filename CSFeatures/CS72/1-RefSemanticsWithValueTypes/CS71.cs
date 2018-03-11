@@ -11,7 +11,7 @@
 //        static void Main(string[] args)
 //        {
 //            int a = 1, b = 2;
-//            if (TryCalculate(a, b, out int total))
+//            if (TryCalculate(ref a, ref b, out int total))
 //            {
 //                Console.WriteLine($"Total: {total}");
 //            }
@@ -22,11 +22,11 @@
 //                Console.WriteLine($"Total Point: {pTotal.X}-{pTotal.Y}");
 //            }
 
-//            Console.WriteLine("Hello World!");
+//            Console.WriteLine("Press ENTER to finalize...");
 //        }
 
 
-//        static bool TryCalculate(int a, int b, out int total)
+//        static bool TryCalculate(ref int a, ref int b, out int total)
 //        {
 //            total = a + b;
 //            return true;
