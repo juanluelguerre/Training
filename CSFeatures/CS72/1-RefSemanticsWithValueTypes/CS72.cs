@@ -1,62 +1,84 @@
 ﻿//
-// https://docs.microsoft.com/en-us/dotnet/csharp/reference-semantics-with-value-types
-//
 // https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.2/readonly-ref.md
 //
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace FeatruesCS72
 {
     public class CS72
     {
+        static int _total;
         static Point _p;
 
         public static void Main(string[] args)
-        {
+        {     
+            // 
+            // 1) "in"
+            //  
+            // Operation using out argument and "in" params for a, b
+            // "in" params (for method) is similar as readonly for properties
             int a = 1, b = 2;
             if (TryCalculate(a, b, out int total))
             {
                 Console.WriteLine($"Total: {total}");
             }
 
+            // Can be used in several kinds of expressions:
+            // (in int x) => x;                                                    // lambda expression  
+            // TValue this[in TKey index];                                         // indexer
+            // public static Vector3 operator +(in Vector3 x, in Vector3 y) => ... // operator
+
+            Func<int, int> calculateDouble = x => x*2;
+            Console.WriteLine($"Double: {calculateDouble(1)}");            
+
+            Console.WriteLine($"Sum10: {Sum10((sum) => sum)}");
+
+            
+			//IDictionary dic = new Dictionary<int, string>();
+			//int key = 2;
+            //var value = dic[in key]; // in argument to an indexer
+
+
+            var c = TryCalculateRefReadOnly(ref a, ref b);
+
             Point p1 = new Point(1, 2), p2 = new Point(3, 4), pTotal;
 
+            // 2) Simple operation using ref argument
             if (TryCalculatePoint(p1, p2, ref pTotal))
             {
-                Console.WriteLine($"Total Point: {pTotal.X}-{pTotal.Y}");
+                Console.WriteLine($"Total Point: {pTotal}");
             }
 
-            CalculatePoint(p1, p2);
+            var totalRefReadOnly = TryCalculatePoint(p1, p2);
 
+            Console.WriteLine($"Total Ref ReadOnly: {totalRefReadOnly}");
             Console.WriteLine("Press ENTER to finalize...");
             Console.ReadLine();
         }
 
+        //static int Sum10(in Func<int, int> predicate)
+        //{
+        //    int[] numbers={1,2,3,4,5,6,7,8,9,10};
+        //    return numbers.Sum(n => predicate(n));    
+        //}
+        
         //
         // 1) "in". As Readonly parameters
         //
         static bool TryCalculate(in int a, in int b, out int total)
         {
+            // "in" params cannot be modified inside de method
             // a = a + 1;
             // b = b + 1;
+
             total = a + b;
             return true;
         }
-
-        static int _total;
-
-        //
-        // 2) "ref readonly"
-        //
-        static ref readonly int TryCalculate2(ref int a, ref int b)
-        {
-            a = a + 1;
-            b = b + 1;
-            _total = a + b;
-            return ref _total;
-        }
-
 
         static bool TryCalculatePoint(Point a, Point b, ref Point total)
         {
@@ -70,17 +92,34 @@ namespace FeatruesCS72
             total.X = 0;
             total.Y = 0;
             return false;
+        }       
+
+        //
+        // 2) "ref readonly"
+        //
+        static ref readonly int TryCalculateRefReadOnly(ref int a, ref int b)
+        {
+            a = a + 1;
+            b = b + 1;
+            _total = a + b; // in this sample, _total have to be a class member
+
+            return ref _total;
         }
 
-        static ref readonly Point CalculatePoint(Point a, Point b)
+        static ref readonly Point TryCalculatePoint(Point a, Point b)
         {
+            _p.X = 0;
+            _p.Y=0;
+
             if (a != null && b != null)
             {
                 _p.X = a.X + b.X;
                 _p.Y = a.Y + b.Y;
             }
-            return ref _p;
+            
+            return ref _p; // in this sample _p have to be class member
         }
+      
     }
 
     public class ImmutableArray<T>

@@ -23,6 +23,8 @@ namespace FeatruesCS72
             total2 = Calculate2(1, b: 2);
             total2 = Calculate2(1, c: 4);
 
+			// total2 = Calculate2(1, ,4); // optional value for second params.
+
 
             // 4). Apply also to Interfaces COM. ie: Excel API. Clean code when a lot of optional arguments !
 
