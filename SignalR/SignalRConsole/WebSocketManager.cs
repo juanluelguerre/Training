@@ -1,18 +1,19 @@
-﻿using System;
+﻿using PureWebSockets;
+using System;
 using System.Net.WebSockets;
 using System.Threading;
-using System.Threading.Tasks;
-using PureWebSockets;
 
 namespace SignalRConsole
 {
     public class WebSocketManager
     {
-		// private string URL = "ws://localhost:3000";
-        private string URL = "ws://echo.websocket.org/";
-
 		private PureWebSocket _ws;
+        private string _url;
 
+        public WebSocketManager(string url)
+        {
+            _url = url;
+        }
 
         public void Run()
         {
@@ -22,7 +23,7 @@ namespace SignalRConsole
                 SendDelay = 100
             };
 
-            _ws = new PureWebSocket(URL, socketOptions);
+            _ws = new PureWebSocket(_url, socketOptions);
 
             _ws.OnStateChanged += Ws_OnStateChanged;
             _ws.OnMessage += Ws_OnMessage;

@@ -11,22 +11,24 @@ namespace FeatruesCS72
     {
         static void Main(string[] args)
         {
-            // 1). Especify optional third parameter. The second one has the default value.
-            var total = Calculate(1, c: 3);
-            total = Calculate(1, c: 2, b: 3); // Changing order
+            // Overload with default params
+            var total = Calculate(1, 2, 3);
 
-            // 2). Intellisense show "[" and "]" to indicate optional parameters
-            // Calculate()
+            total = Calculate(a: 1, b: 2, c: 3);
 
-            // 3). Overload resolution
-            var total2 = Calculate2(1, 2);
-            total2 = Calculate2(1, b: 2);
-            total2 = Calculate2(1, c: 4);
+            total = Calculate(a: 1, c: 3, b: 2); // Changing order       
 
-			// total2 = Calculate2(1, ,4); // optional value for second params.
+            // And also
+            total = Calculate2(1, 2);
+            total = Calculate2(1, b: 2);
 
+            // But those not work for C# 7.1. Here we have to explicit name params for all of them
+            // total = Calculate2(1, b: 4, 2);
+            // total = Calculate2(1, c: 4, 2);
 
-            // 4). Apply also to Interfaces COM. ie: Excel API. Clean code when a lot of optional arguments !
+            // C# 7.2 & Upper
+            total = Calculate2(1, b: 4, 2);            
+
 
             Console.WriteLine("Press ENTER to finalize...");
             Console.ReadLine();

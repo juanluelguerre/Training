@@ -39,9 +39,9 @@ namespace FeatruesCS72
             Console.WriteLine($"Sum10: {Sum10((sum) => sum)}");
 
             
-			//IDictionary dic = new Dictionary<int, string>();
-			//int key = 2;
-            //var value = dic[in key]; // in argument to an indexer
+			IDictionary dic = new Dictionary<int, string>();
+			int key = 2;
+            var value = dic[in key]; // in argument to an indexer
 
 
             var c = TryCalculateRefReadOnly(ref a, ref b);
@@ -61,12 +61,12 @@ namespace FeatruesCS72
             Console.ReadLine();
         }
 
-        //static int Sum10(in Func<int, int> predicate)
-        //{
-        //    int[] numbers={1,2,3,4,5,6,7,8,9,10};
-        //    return numbers.Sum(n => predicate(n));    
-        //}
-        
+        static int Sum10(in Func<int, int> predicate)
+        {
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            return numbers.Sum(n => predicate(n));
+        }
+
         //
         // 1) "in". As Readonly parameters
         //

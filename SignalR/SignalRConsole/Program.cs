@@ -1,29 +1,43 @@
-﻿using System;
-using System.Diagnostics;
-using System.Net.Http;
-using System.Net.WebSockets;
-using System.Security.Authentication;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.SignalR.Client;
-using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.SignalR.Internal.Protocol;
+﻿using Microsoft.Extensions.Configuration;
 using SignalRConsole;
+using System;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace SignaRClient
 {
     public class Program
     {
+		// private static string DEFAULT_URL = "http://echo.websocket.org/";
+        private static string DEFAULT_URL = "http://localhost:3000";
+
 		public static async Task Main(string[] args)
 		{
+            var builder = new ConfigurationBuilder()
+               .SetBasePath(Directory.GetCurrentDirectory())
+               .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
 
-			//  var manager = new WebSocketManager();
-			//  manager.Run();
+            IConfigurationRoot configuration = builder.Build();
 
-			var manager = new SignalRManager();
-			await manager.Run();
+            string url = configuration.GetValue("url", DEFAULT_URL);
 
-		}
+            //if (configuration.GetValue<bool>("UseSignalR", true))
+            //{
+            //    var manager = new SignalRManager(url);
+            //    await manager.Run();
+            //}
+            //else
+            //{
+            //    var manager = new WebSocketManager(url);
+            //    manager.Run();
+            //}
+
+            var manager = new SocketIOManager(url);
+            manager.Run();
+
+            Console.WriteLine();
+            Console.WriteLine("Pulse INTRO para finalizar...");
+            Console.ReadLine();            
+        }
     }
 }
