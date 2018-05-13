@@ -6,6 +6,8 @@ namespace FeatruesCS72
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Leading Underscores In Numeric Literals");
+
             // Before, in C# 7.0 / 7.1
             const int Sixteen = 0b0001_0000;
             const int ThirtyTwo = 0b0010_0000;

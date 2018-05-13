@@ -16,7 +16,9 @@ namespace FeatruesCS72
         static Point _p;
 
         public static void Main(string[] args)
-        {     
+        {
+            Console.WriteLine("Ref Semantics With Values Types");
+
             // 
             // 1) "in"
             //  
@@ -28,33 +30,34 @@ namespace FeatruesCS72
                 Console.WriteLine($"Total: {total}");
             }
 
-            // Can be used in several kinds of expressions:
-            // (in int x) => x;                                                    // lambda expression  
-            // TValue this[in TKey index];                                         // indexer
-            // public static Vector3 operator +(in Vector3 x, in Vector3 y) => ... // operator
-
-            Func<int, int> calculateDouble = x => x*2;
-            Console.WriteLine($"Double: {calculateDouble(1)}");            
-
-            Console.WriteLine($"Sum10: {Sum10((sum) => sum)}");
-
-            
-			IDictionary dic = new Dictionary<int, string>();
+            //
+            // 2) As Indexer
+            //
+            // TValue this[in TKey index];
+            ImmutableArray<int> dic = new ImmutableArray<int>();
 			int key = 2;
             var value = dic[in key]; // in argument to an indexer
 
-
+            //
+            // 3) "ref readonly"
+            //
             var c = TryCalculateRefReadOnly(ref a, ref b);
 
-            Point p1 = new Point(1, 2), p2 = new Point(3, 4), pTotal;
-
-            // 2) Simple operation using ref argument
+            //
+            // 4) Simple operation using ref argument
+            //
+            Point p1 = new Point(1, 2), p2 = new Point(3, 4), pTotal;           
             if (TryCalculatePoint(p1, p2, ref pTotal))
             {
                 Console.WriteLine($"Total Point: {pTotal}");
             }
 
             var totalRefReadOnly = TryCalculatePoint(p1, p2);
+
+            //
+            // 5) And also we can use "in" with operators:
+            //
+            // public static Vector3 operator +(in Vector3 x, in Vector3 y) => ... // operator
 
             Console.WriteLine($"Total Ref ReadOnly: {totalRefReadOnly}");
             Console.WriteLine("Press ENTER to finalize...");
@@ -133,6 +136,15 @@ namespace FeatruesCS72
             this._current = array[i];
             return ref this._current;
 
+        }
+
+        public T this[in int key]
+        {
+            get
+            {
+                _current = array[1];
+                return _current;
+            }
         }
     }
 }

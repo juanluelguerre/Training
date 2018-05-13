@@ -11,6 +11,8 @@ namespace FeatruesCS72
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Non Trainling Named Args");
+
             // Overload with default params
             var total = Calculate(1, 2, 3);
 

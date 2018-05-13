@@ -8,11 +8,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2-NonTrailingNamedArgs", "2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3-LeadingUnderscoresInNumericLiterals", "3-LeadingUnderscoresInNumericLiterals\3-LeadingUnderscoresInNumericLiterals.csproj", "{D511892C-4657-4FA5-AB51-27587001CAAD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4-PrivateProtectedAccessModifier", "4-PrivateProtectedAccessModifier\4-PrivateProtectedAccessModifier.csproj", "{00AFFEA0-D6E9-43E7-B49C-D4AF5538F88E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\Inheritance.csproj", "{ABE22AEE-0D28-4F27-9AF0-7FFE018DD01A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 Private Protected Access Modifier", "4 Private Protected Access Modifier", "{1DB81A64-ADEF-45E1-93DE-BCA160A468E2}"
+	ProjectSection(SolutionItems) = preProject
+		4-PrivateProtectedAccessModifier\Private Protected.png = 4-PrivateProtectedAccessModifier\Private Protected.png
+		4-PrivateProtectedAccessModifier\Summart Access Modifiers.png = 4-PrivateProtectedAccessModifier\Summart Access Modifiers.png
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance", "4-PrivateProtectedAccessModifier\Inheritance\Inheritance.csproj", "{88B421F2-503D-4990-8EC5-2D10E0FDE392}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4-PrivateProtectedAccessModifier", "4-PrivateProtectedAccessModifier\PrivateProtectedAccessModifier\4-PrivateProtectedAccessModifier.csproj", "{08BAA254-8950-4C85-B841-BC97E9F38B95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,21 +36,21 @@ Global
 		{D511892C-4657-4FA5-AB51-27587001CAAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D511892C-4657-4FA5-AB51-27587001CAAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D511892C-4657-4FA5-AB51-27587001CAAD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{00AFFEA0-D6E9-43E7-B49C-D4AF5538F88E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00AFFEA0-D6E9-43E7-B49C-D4AF5538F88E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00AFFEA0-D6E9-43E7-B49C-D4AF5538F88E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00AFFEA0-D6E9-43E7-B49C-D4AF5538F88E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ABE22AEE-0D28-4F27-9AF0-7FFE018DD01A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ABE22AEE-0D28-4F27-9AF0-7FFE018DD01A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ABE22AEE-0D28-4F27-9AF0-7FFE018DD01A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ABE22AEE-0D28-4F27-9AF0-7FFE018DD01A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88B421F2-503D-4990-8EC5-2D10E0FDE392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B421F2-503D-4990-8EC5-2D10E0FDE392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B421F2-503D-4990-8EC5-2D10E0FDE392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B421F2-503D-4990-8EC5-2D10E0FDE392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08BAA254-8950-4C85-B841-BC97E9F38B95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08BAA254-8950-4C85-B841-BC97E9F38B95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08BAA254-8950-4C85-B841-BC97E9F38B95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08BAA254-8950-4C85-B841-BC97E9F38B95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{00AFFEA0-D6E9-43E7-B49C-D4AF5538F88E} = {1DB81A64-ADEF-45E1-93DE-BCA160A468E2}
-		{ABE22AEE-0D28-4F27-9AF0-7FFE018DD01A} = {1DB81A64-ADEF-45E1-93DE-BCA160A468E2}
+		{88B421F2-503D-4990-8EC5-2D10E0FDE392} = {1DB81A64-ADEF-45E1-93DE-BCA160A468E2}
+		{08BAA254-8950-4C85-B841-BC97E9F38B95} = {1DB81A64-ADEF-45E1-93DE-BCA160A468E2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {08A74D12-C941-4DB7-A554-E2D0CB0C6E13}
