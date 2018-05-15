@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace InprovedOverloadCandidates
+namespace ImprovedOverloadCandidates
 {
     class Program
     {
@@ -8,9 +8,12 @@ namespace InprovedOverloadCandidates
         {
             // https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.3/improved-overload-candidates.md
 
-            Console.WriteLine("Inproved Overload Candidates");
+            Console.WriteLine("Improved Overload Candidates");
 
-            
+
+            // Detail here:
+            // https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.3/improved-overload-candidates.md
+
 
             Console.WriteLine("Press ENTER to finish...");
             Console.ReadLine();

@@ -15,7 +15,10 @@ namespace Inheritance
         {
             BaseClass b = new BaseClass();
             Console.WriteLine($"{b.Description}");
-            Console.WriteLine($"{b.InternalName}");             
+            Console.WriteLine($"{b.InternalName}"); // Because we are in the same assembly.
+
+            // NO OK
+            // Console.WriteLine($"{b._PrivateProtectedName}"); // No OK. It's a Private Protected Access
         }
     }
 }

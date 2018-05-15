@@ -10,7 +10,7 @@ using System.Linq.Expressions;
 
 namespace FeatruesCS72
 {
-    public class CS72
+    public class Program
     {
         static int _total;
         static Point _p;
@@ -34,12 +34,13 @@ namespace FeatruesCS72
             // 2) As Indexer
             //
             // TValue this[in TKey index];
-            ImmutableArray<int> dic = new ImmutableArray<int>();
-			int key = 2;
-            var value = dic[in key]; // in argument to an indexer
+            //ImmutableArray<int> dic = new ImmutableArray<int>();
+			//int key = 2;
+            //var value = dic[in key]; // in argument to an indexer
 
             //
-            // 3) "ref readonly"
+            // 3)   "ref readonly". Leverages the efficiency of passing variables by reference, 
+            //      but without exposing the data to modifications.
             //
             var c = TryCalculateRefReadOnly(ref a, ref b);
 
@@ -60,15 +61,15 @@ namespace FeatruesCS72
             // public static Vector3 operator +(in Vector3 x, in Vector3 y) => ... // operator
 
             Console.WriteLine($"Total Ref ReadOnly: {totalRefReadOnly}");
-            Console.WriteLine("Press ENTER to finalize...");
+            Console.WriteLine("Press ENTER to exit...");
             Console.ReadLine();
         }
 
-        static int Sum10(in Func<int, int> predicate)
-        {
-            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            return numbers.Sum(n => predicate(n));
-        }
+        //static int Sum10(in Func<int, int> predicate)
+        //{
+        //    int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        //    return numbers.Sum(n => predicate(n));
+        //}
 
         //
         // 1) "in". As Readonly parameters
@@ -104,7 +105,7 @@ namespace FeatruesCS72
         {
             a = a + 1;
             b = b + 1;
-            _total = a + b; // in this sample, _total have to be a class member
+            _total = a + b; // in this sample, '_total' have to be a class member
 
             return ref _total;
         }
@@ -142,7 +143,7 @@ namespace FeatruesCS72
         {
             get
             {
-                _current = array[1];
+                _current = array[key];
                 return _current;
             }
         }

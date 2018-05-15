@@ -7,11 +7,11 @@ using System.Text;
 
 namespace FeatruesCS72
 {
-    class CS72
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Non Trainling Named Args");
+            Console.WriteLine("Non Trailing Named Args");
 
             // Overload with default params
             var total = Calculate(1, 2, 3);
@@ -24,15 +24,14 @@ namespace FeatruesCS72
             total = Calculate2(1, 2);
             total = Calculate2(1, b: 2);
 
-            // But those not work for C# 7.1. Here we have to explicit name params for all of them
+            // No OK for C# 7.1. Here we have to explicit name params for all of them
             // total = Calculate2(1, b: 4, 2);
             // total = Calculate2(1, c: 4, 2);
 
-            // C# 7.2 & Upper
-            total = Calculate2(1, b: 4, 2);            
+            // OK on C# 7.2 & Upper
+            total = Calculate2(1, b: 4, c:2);            
 
-
-            Console.WriteLine("Press ENTER to finalize...");
+            Console.WriteLine("Press ENTER to exit...");
             Console.ReadLine();
         }
 

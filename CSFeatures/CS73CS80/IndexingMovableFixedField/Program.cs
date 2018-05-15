@@ -1,18 +1,16 @@
 ﻿using System;
 
 namespace IndexingMovableFixedField
-{
-    //
-    // 1) Compiling with unsafe. Check on project property
-    //
+{   
+    // Compiling with unsafe. Mark on project (.csproj) property
     unsafe struct S
     {
         public fixed int MyFixedField[10];
     }
 
-    class Program
+    public class Program
     {
-        // https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.3/indexing-movable-fixed-fields.md
+        // https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.3/indexing-movable-fixed-fields.md        
 
         static S s;
 
@@ -24,8 +22,8 @@ namespace IndexingMovableFixedField
             int p = s.MyFixedField[5]; // indexing fixed-size array fields would be ok
 
 
-            //int* ptr = s.MyFixedField; // taking a pointer explicitly still requires pinning.
-            //int p2 = ptr[5];
+            // int* ptr = s.MyFixedField; // taking a pointer explicitly still requires pinning.
+            // int p2 = ptr[5];
 
 
             Console.WriteLine("Press ENTER to finish...");
