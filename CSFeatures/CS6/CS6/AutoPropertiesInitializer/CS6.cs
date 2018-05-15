@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿using System.Collections.Generic;
+using static System.Console;
 
 namespace FeaturesCS6
 {
@@ -7,6 +8,8 @@ namespace FeaturesCS6
         public int Id { get; } = 1;
         public string Title { get; set; } = "Project 1";
         public string Description { get; set; } = "New Features C#6";
+
+        public List<string> Tareas { get; set; } = new List<string>();
 
         public ProjectCS6()
         {

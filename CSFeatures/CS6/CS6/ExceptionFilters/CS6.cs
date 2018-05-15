@@ -24,10 +24,14 @@ namespace FeaturesCS6
                 e.Data.Add(-1, "BUSINESS ERROR");
                 throw e;
             }
+            catch (ApplicationException ex) when (Debugger.IsAttached)
+            {
+                WriteLine($"ERROR: {ex.StackTrace}");
+            }
             catch (ApplicationException ex) when (Log($"Business Error - {ex.Message}", reThrow: ex.Data.Keys.Count == 0))
             {
-                // Code never reached intentionally
-            }
+                // Code never reached intentionally. Log Method return false, so everytime execute Log to trace errors !!!
+            }           
             catch (Exception ex) when (ex.Message == "Exception 1")
             {
                 Log($"Exception 1 for business !!!, {ex.Message}");

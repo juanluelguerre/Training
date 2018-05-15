@@ -14,10 +14,13 @@ namespace FeaturesCS6
             };
 
 
+            // Before
+            WriteLine("Id: {0} - Title: {1}", p.Id, p.Title);
+            // Before using nameof
+            WriteLine("{0}: {1} - {2}: {3}", nameof(p.Id), p.Id, nameof(p.Title), p.Title);
 
-            // WriteLine("{0}: {1} - {2}: {3}", nameof(p.Id), p.Id, nameof(p.Title), p.Title);
-
-            WriteLine($"Id: {p.Id} - Title: {p.Title}");
+            // Now
+            WriteLine($"Id: {p.Id} - Title: {4 +5}");
 
             WriteLine("Pulse INTRO para finalizar...");
             ReadLine();

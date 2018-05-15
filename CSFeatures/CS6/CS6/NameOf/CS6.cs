@@ -17,9 +17,17 @@ namespace FeaturesCS6
                 Description = "New Features C#6"
             };
 
-            System.Console.WriteLine("{0}: {1} - {2}: {3}", nameof(p.Id), p.Id, nameof(p.Title), p.Title);
+
+
+            System.Console.WriteLine("{0}: {1} - {2}: {3}", nameof(p.Id), p.Id, nameof(MyClass.Nombre), p.Title);
             System.Console.WriteLine("Pulse INTRO para finalizar...");
             System.Console.ReadLine();
         }
+    }
+
+    static class MyClass
+    {
+        public static string Nombre { get; set; }
+
     }
 }

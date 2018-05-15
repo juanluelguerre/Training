@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+﻿    using System.ComponentModel;
 
 namespace FeaturesCS6
 {
@@ -17,7 +17,7 @@ namespace FeaturesCS6
             set
             {
                 name = value;
-                OnPropertyChanged(nameof(Name));
+                OnPropertyChanged(nameof(name));
             }
         }
 

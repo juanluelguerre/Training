@@ -15,7 +15,11 @@ namespace FeaturesCS6
                 Tasks = new List<string>() { "Task 1" }
             };
 
-            WriteLine($"El Proyecto '{p?.Title}' tiene {p?.Tasks?.Count ?? 0} tarea(s).");
+            var p2 = new Project();
+
+       
+
+            WriteLine($"El Proyecto '{p2?.Title}' tiene {p2?.Tasks.Count ?? -1} tarea(s).");
 
             WriteLine("Pulse INTRO para finalizar...");
             ReadLine();
