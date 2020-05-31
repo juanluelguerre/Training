@@ -5,6 +5,24 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExploreCsharpEight", "ExploreCsharpEight\ExploreCsharpEight.csproj", "{CF90DE74-B048-4176-93B9-150E4E8DCB79}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{54408DEA-F5DE-42AB-A652-C1A42CD9F726}"
+	ProjectSection(SolutionItems) = preProject
+		asynchronous-streams.md = asynchronous-streams.md
+		index.md = index.md
+		indices-and-ranges-examples.md = indices-and-ranges-examples.md
+		indices-and-ranges-scenario.md = indices-and-ranges-scenario.md
+		indices-and-ranges.md = indices-and-ranges.md
+		nullable-fix-class.md = nullable-fix-class.md
+		nullable-reference-types.md = nullable-reference-types.md
+		patterns-occupancy.md = patterns-occupancy.md
+		patterns-peakpricing.md = patterns-peakpricing.md
+		patterns-types.md = patterns-types.md
+		patterns.md = patterns.md
+		readme.md = readme.md
+		static-local-functions.md = static-local-functions.md
+		using-declarations-ref-structs.md = using-declarations-ref-structs.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
