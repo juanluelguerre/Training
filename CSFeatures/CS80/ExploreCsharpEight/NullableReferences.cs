@@ -9,7 +9,9 @@ using System.Text;
 namespace ExploreCsharpEight
 {
     #region Nullable_PersonDefinition
+    
     #nullable enable
+    
     internal class Person
     {
         public string FirstName { get; set; }
@@ -24,14 +26,18 @@ namespace ExploreCsharpEight
 
         public override string ToString() => $"{FirstName} {MiddleName} {LastName}";
     }
+
     #nullable restore
+
     #endregion
 
     class NullableReferences
     {
 
         #region Nullable_GetLengthMethod
+
         #nullable enable
+
         private static int GetLengthOfMiddleName(Person p)
         {
                 string middleName = p.MiddleName;
@@ -44,11 +50,13 @@ namespace ExploreCsharpEight
         {
             #region Nullable_Usage
             #nullable enable
-            Person miguel = new Person("Miguel", "de Icaza");
+
+            Person miguel = new Person("Juan Luis", "Guerrero");
             var length = GetLengthOfMiddleName(miguel);
             Console.WriteLine(length);
             #nullable restore
             //Was this tested on a person who doesn't have a middle name?
+
             #endregion
             return 0;
         }
