@@ -22,6 +22,7 @@ namespace ExploreCsharpEight
         internal async Task<int> ConsumeStream()
         {
             #region AsyncStreams_Consume
+
             await foreach (var number in GenerateSequence())
             {
                 Console.WriteLine($"The time is {DateTime.Now:hh:mm:ss}. Retrieved {number}");

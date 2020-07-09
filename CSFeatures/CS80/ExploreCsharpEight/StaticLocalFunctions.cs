@@ -45,13 +45,21 @@ namespace ExploreCsharpEight
             return 1;
         }
 
-
         #region LocalFunction_Static
+
+        // 
+        // INFO:
+        //
+        // You can now add the static modifier to local functions to ensure that local function doesn't capture (reference) any variables from the enclosing scope.
+        // Doing so generates CS8421, "A static local function can't contain a reference to<variable>."
+        //
         public IEnumerable<int> StaticCounter(int start, int end)
         {
             if (start >= end) throw new ArgumentOutOfRangeException("start must be less than end");
 
             return localCounter(start, end);
+
+            // NOTE: No static specified --> Warning.
 
             static IEnumerable<int> localCounter(int first, int endLocation)
             {
@@ -59,6 +67,7 @@ namespace ExploreCsharpEight
                     yield return i;
             }
         }
+
         #endregion
 
     }

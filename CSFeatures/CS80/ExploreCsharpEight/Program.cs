@@ -37,8 +37,8 @@ namespace ExploreCsharpEight
 
                 "LocalFunction_Counting"            => new StaticLocalFunctions().LocalFunctionWithCapture(),
 
-                "Using_Block"                       => new UsingDeclarationsRefStruct().OldStyle(),
-                "Using_Declaration"                 => new UsingDeclarationsRefStruct().NewStyle(),
+                "Using_Block"                       => new Using_DeclarationsRefStruct().OldStyle(),
+                "Using_Declaration"                 => new Using_DeclarationsRefStruct().NewStyle(),
 
                 "Nullable_PersonDefinition"         => new NullableReferences().NullableTestBed(),
                 "Nullable_GetLengthMethod"          => new NullableReferences().NullableTestBed(),
@@ -89,7 +89,7 @@ namespace ExploreCsharpEight
             localFuncs.LocalFunctionWithNoCapture();
 
             Console.WriteLine("==========          Starting using declaration / ref struct.   ==========");
-            var usings = new UsingDeclarationsRefStruct();
+            var usings = new Using_DeclarationsRefStruct();
             Console.WriteLine("          ==========          Run using block style.  ==========");
             usings.OldStyle();
             Console.WriteLine("          ==========          Run declaration style.  ==========");
@@ -126,6 +126,11 @@ namespace ExploreCsharpEight
             indexSamples.Syntax_WhyChosenSemantics();
             Console.WriteLine("          ==========          Scenario.              ==========");
             indexSamples.ComputeMovingAverages();
+
+            var d = new Default_Interfaces_Methods();
+            d.DoSomething();
+
+
             return 0;
         }
     }
