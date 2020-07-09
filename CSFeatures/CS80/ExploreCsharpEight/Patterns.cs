@@ -32,6 +32,7 @@ namespace ExploreCsharpEight
                 {} => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
                 null => throw new ArgumentNullException(nameof(vehicle))
             };
+
         #endregion
     }
 
@@ -201,6 +202,7 @@ namespace ExploreCsharpEight
         internal int VehicleType()
         {
             #region Patterns_VehicleType
+
             var tollCalc = new TollCalculator_V1();
 
             var car = new Car();
@@ -233,6 +235,7 @@ namespace ExploreCsharpEight
             return 0;
         }
 
+
         internal int TestOccupancy(string regionName)
         {
 
@@ -261,7 +264,7 @@ namespace ExploreCsharpEight
             var truck = new DeliveryTruck { GrossWeightClass = 4000 };
             var lightTruck = new DeliveryTruck { GrossWeightClass = 2500 };
 
-            Console.WriteLine($"The toll for a solo driver is {tollCalc.CalculateToll(soloDriver)}");
+            Console.WriteLine($"The toll for a only driver is {tollCalc.CalculateToll(soloDriver)}");
             Console.WriteLine($"The toll for a two ride share is {tollCalc.CalculateToll(twoRideShare)}");
             Console.WriteLine($"The toll for a three ride share is {tollCalc.CalculateToll(threeRideShare)}");
             Console.WriteLine($"The toll for a fullVan is {tollCalc.CalculateToll(fullVan)}");

@@ -12,14 +12,24 @@ namespace FeatruesCS7
     {
         static void Main(string[] args)
         {
-            var alphabet = new List<char>()
+            //try
+            //{
+
+                var alphabet = new List<char>()
                 { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ' } as IEnumerable<char>;
 
-            var resultSet = alphabet.AlphabetSubset3('f', 'a');
-            Console.WriteLine("iterator created");
-            foreach (var thing in resultSet)
-                Console.Write($"{thing}, ");
+                var resultSet = alphabet.AlphabetSubset1('f', 'a');
+                Console.WriteLine("iterator created");
+                foreach (var thing in resultSet)
+                    Console.Write($"{thing}, ");
 
+			//        }
+			//        catch (Exception ex)
+			//        {
+			//Console.WriteLine($"ERROR: {ex.Message}");
+			//        }
+
+			Console.WriteLine();
             WriteLine("Pulse INTRO para finalizar...");
             ReadLine();
         }
@@ -28,7 +38,7 @@ namespace FeatruesCS7
 
         // Exception thrown when the result of this method used. Inside the Caller!
 
-        public static IEnumerable<char> AlphabetSubset(this IEnumerable<char> _, char start, char end)
+        public static IEnumerable<char> AlphabetSubset1(this IEnumerable<char> _, char start, char end)
         {
             if (start < 'a' || start > 'z')
                 throw new ArgumentOutOfRangeException(paramName: nameof(start), message: "start must be a letter");
@@ -37,6 +47,7 @@ namespace FeatruesCS7
 
             if (end <= start)
                 throw new ArgumentException($"{nameof(end)} must be greater than {nameof(start)}");
+
             for (var c = start; c < end; c++)
                 yield return c;
         }
@@ -56,6 +67,7 @@ namespace FeatruesCS7
 
             if (end <= start)
                 throw new ArgumentException($"{nameof(end)} must be greater than {nameof(start)}");
+            
             return AlphabetSubsetImplementation(start, end);
         }
 

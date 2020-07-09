@@ -37,10 +37,12 @@ namespace ExploreCsharpEight
         internal int Syntax_Range()
         {
             #region IndicesAndRanges_Range
+
             var quickBrownFox = words[1..4];
             foreach (var word in quickBrownFox)
                 Console.Write($"< {word} >");
             Console.WriteLine();
+
             #endregion
             return 0;
         }
@@ -48,10 +50,12 @@ namespace ExploreCsharpEight
         internal int Syntax_LastRange()
         {
             #region IndicesAndRanges_LastRange
+
             var lazyDog = words[^2..^0];
             foreach (var word in lazyDog)
                 Console.Write($"< {word} >");
             Console.WriteLine();
+
             #endregion
             return 0;
         }
@@ -59,6 +63,7 @@ namespace ExploreCsharpEight
         internal int Syntax_PartialRange()
         {
             #region IndicesAndRanges_PartialRanges
+
             var allWords = words[..]; // contains "The" through "dog".
             var firstPhrase = words[..4]; // contains "The" through "fox"
             var lastPhrase = words[6..]; // contains "the, "lazy" and "dog"
@@ -71,6 +76,7 @@ namespace ExploreCsharpEight
             foreach (var word in lastPhrase)
                 Console.Write($"< {word} >");
             Console.WriteLine();
+
             #endregion
             return 0;
         }
@@ -78,6 +84,7 @@ namespace ExploreCsharpEight
         internal int Syntax_IndexRangeType()
         {
             #region IndicesAndRanges_RangeIndexTypes
+
             Index the = ^3;
             Console.WriteLine(words[the]);
             Range phrase = 1..4;
@@ -85,6 +92,7 @@ namespace ExploreCsharpEight
             foreach (var word in text)
                 Console.Write($"< {word} >");
             Console.WriteLine();
+
             #endregion
             return 0;
         }
@@ -92,6 +100,7 @@ namespace ExploreCsharpEight
         internal int Syntax_WhyChosenSemantics()
         {
             #region IndicesAndRanges_CreateRange
+
             var numbers = Enumerable.Range(0, 100).ToArray();
             int x = 12;
             int y = 25;
@@ -99,6 +108,7 @@ namespace ExploreCsharpEight
             #endregion
 
             #region IndicesAndRanges_MathWithLength
+
             Console.WriteLine("===================== ^0 is the same as Length.     =>");
             Console.WriteLine($"{numbers[^x]} is the same as {numbers[numbers.Length - x]}");
             Console.WriteLine($"{numbers[x..y].Length} is the same as {y - x}");
@@ -139,6 +149,7 @@ namespace ExploreCsharpEight
         internal int ComputeMovingAverages()
         {
             #region IndicesAndRanges_MovingAverage
+
             int[] sequence = Sequence(1000);
 
 
