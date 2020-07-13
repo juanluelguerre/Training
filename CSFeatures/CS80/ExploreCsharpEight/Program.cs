@@ -66,17 +66,17 @@ namespace ExploreCsharpEight
 
         private static async Task<int> RunAll()
         {
-            // Do_PatternSamples();
+            Do_PatternSamples();
 
-            // Do_StaticLocalFunctionsSamples();
+            Do_StaticLocalFunctionsSamples();
 
-            // Do_Using_DeclarationsRefStructSamples();
+            Do_Using_DeclarationsRefStructSamples();
 
-            // Do_NullableReferencesSamples();
+            Do_NullableReferencesSamples();
 
-            // await Do_AsyncStreamsSamples();
+            await Do_AsyncStreamsSamples();
 
-            // Do_DefaultInterfacesMethodsSamples();
+            Do_DefaultInterfacesMethodsSamples();
 
             Do_IndicesAndRangesSamples();
 
@@ -94,9 +94,9 @@ namespace ExploreCsharpEight
         {
             Console.WriteLine("==========          Starting using declaration / ref struct.   ==========");
             var usings = new Using_DeclarationsRefStruct();
-            Console.WriteLine("          ==========          Run using block style.  ==========");
+            Console.WriteLine("Run using block style.");
             usings.OldStyle();
-            Console.WriteLine("          ==========          Run declaration style.  ==========");
+            Console.WriteLine("Run declaration style.");
             usings.NewStyle();
         }
 
@@ -104,7 +104,7 @@ namespace ExploreCsharpEight
         {
             Console.WriteLine("==========          Starting nullable reference samples.       ==========");
             var nullableSamples = new NullableReferences();
-            Console.WriteLine("          ==========          Run nullable.          ==========");
+            Console.WriteLine("Run nullable.");
             try
             {
                 nullableSamples.NullableTestBed();
@@ -119,17 +119,17 @@ namespace ExploreCsharpEight
         {
             Console.WriteLine("==========          Starting pattern matching samples.         ==========");
             var patterns = new Patterns();
-            Console.WriteLine("          ==========          Run vehicle type.       ==========");
+            Console.WriteLine("Run vehicle type.");
             patterns.VehicleType();
-            Console.WriteLine("          ==========          Run car taxi occupancy. ==========");
+            Console.WriteLine("Run car taxi occupancy.");
             patterns.TestOccupancy("Pattern_CarTaxiOccupancy");
-            Console.WriteLine("          ==========          Run bus occupancy.      ==========");
+            Console.WriteLine("Run bus occupancy.");
             patterns.TestOccupancy("Pattern_BusOccupancy");
-            Console.WriteLine("          ==========          Run delivery truck.     ==========");
+            Console.WriteLine("Run delivery truck.");
             patterns.TestOccupancy("Pattern_DeliveryTruckWeight");
-            Console.WriteLine("          ==========          Run chained patterns.   ==========");
+            Console.WriteLine("Run chained patterns.");
             patterns.TestOccupancy("Pattern_ChainedPatterns");
-            Console.WriteLine("          ==========          Run peak pricing.       ==========");
+            Console.WriteLine("Run peak pricing.");
             patterns.PeakPricing();
         }
 
@@ -137,9 +137,9 @@ namespace ExploreCsharpEight
         {
             Console.WriteLine("==========          Starting static local functions.           ==========");
             var localFuncs = new StaticLocalFunctions();
-            Console.WriteLine("          ==========          Run local func capture. ==========");
+            Console.WriteLine("Run local func capture.");
             localFuncs.LocalFunctionWithCapture();
-            Console.WriteLine("          ==========          Run local static func.  ==========");
+            Console.WriteLine("Run local static func.");
             localFuncs.LocalFunctionWithNoCapture();
         }
 
