@@ -180,7 +180,7 @@ namespace ExploreCsharpEight
             {
                 DayOfWeek.Saturday => false,
                 DayOfWeek.Sunday => false,
-                _ => true
+                _ => false
             };
 
         #region Pattern_PeakTime

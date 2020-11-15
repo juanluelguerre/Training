@@ -9,7 +9,7 @@ namespace FeaturesCS7
         public string Title { get; set; } = "Project 1";
         public string Description { get; set; } = "New Features C#6";
         public string GetDetail() =>
-            $"This is a project with id {Id}, title {Title} and a description: {Description}";
+            $"This is a project with id {Id}, title {Title} and a description: {Description}";            
 
         #region CASE 1) Constructor: Expression-bodied constructor
 

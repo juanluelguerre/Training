@@ -52,7 +52,7 @@ namespace ExploreCsharpEight
         internal int OldStyle()
         {
             #region Using_Block
-
+            
             using (var src = new ResourceHog("source"))
             {
                 using (var dest = new ResourceHog("destination"))
@@ -66,6 +66,14 @@ namespace ExploreCsharpEight
             #endregion
             return 0;
         }
+
+
+
+
+
+
+
+
         internal int NewStyle()
         {
             #region Using_Declaration

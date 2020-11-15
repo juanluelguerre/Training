@@ -11,24 +11,26 @@ namespace ExploreCsharpEight
 		// Now in C# 8.0 we can create a default implementation. Now modificator (public | protected | internal | Sealed | Virtual  apply for it  !!!!
 
 		void DisplayMessage(string message) => Console.WriteLine($"Display: {message}");
+		// void DisplayMessage(string message);
 
 		// https://github.com/dotnet/csharplang/milestone/11
 	}
 
-	public class DisplayService : IDisplayService
-	{
-		#region CASE 1) --> As usual before C# 8.0
+    public class DisplayService : IDisplayService
+    {
+        #region CASE 1) --> As usual before C# 8.0
 
-		// Now in C# 8.0 we don't need to implement below (as default) implementation.
-		//public void DisplayMessage(string message)
-		//{
-		//	Console.WriteLine($"Display: {message}");
-		//}
+        // Now in C# 8.0 we don't need to implement below (as default) implementation.
+        //public void DisplayMessage(string message)
+        //{
+        //	Console.WriteLine($"Display: {message}");
+        //}
 
-		#endregion
-	}
+        #endregion
 
-	public class Default_Interfaces_Methods
+    }
+
+    public class Default_Interfaces_Methods
 	{
 		public void DoSomething()
 		{

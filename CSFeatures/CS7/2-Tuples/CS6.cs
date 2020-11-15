@@ -11,7 +11,7 @@
 //        static void Main(string[] args)
 //        {
 //            var t = Tuple.Create("a", "b", "c");
-//            WriteLine($"{t.Item1t.Item2}{t.Item3}");
+//            WriteLine($"{t.Item1},{t.Item2}{t.Item3}");
 
 //            WriteLine("Pulse INTRO para finalizar...");
 //            ReadLine();
