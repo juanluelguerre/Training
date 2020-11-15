@@ -54,6 +54,8 @@ namespace FeatruesCS7
 
         #endregion
 
+
+         
         #region CASE 2
 
         // 1) Exception thrown when method is called.        
@@ -114,7 +116,7 @@ namespace FeatruesCS7
         public static Task<string> PerformLongRunningWork(string address, int index, string name)
         {
             if (string.IsNullOrWhiteSpace(address))
-                throw new ArgumentException(message: "An address is required", paramName: nameof(address));
+                throw new ArgumentException(message: $"An {nameof(address)} is required", paramName: nameof(address));
             if (index < 0)
                 throw new ArgumentOutOfRangeException(paramName: nameof(index), message: "The index must be non-negative");
             if (string.IsNullOrWhiteSpace(name))

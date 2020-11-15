@@ -66,19 +66,19 @@ namespace ExploreCsharpEight
 
         private static async Task<int> RunAll()
         {
-            Do_PatternSamples();
+            //Do_PatternSamples();
 
-            Do_StaticLocalFunctionsSamples();
+            // Do_StaticLocalFunctionsSamples();
 
             Do_Using_DeclarationsRefStructSamples();
 
-            Do_NullableReferencesSamples();
+            //Do_NullableReferencesSamples();
 
-            await Do_AsyncStreamsSamples();
+            //await Do_AsyncStreamsSamples();
 
-            Do_DefaultInterfacesMethodsSamples();
+            // Do_DefaultInterfacesMethodsSamples();
 
-            Do_IndicesAndRangesSamples();
+            // Do_IndicesAndRangesSamples();
 
             return 0;
         }
