@@ -47,10 +47,6 @@ namespace ExploreCsharpEight
 			srv.DisplayMessage("Hi from C# 8.0");
 
 			#endregion
-
-
-			Console.WriteLine("Press ENTER to finish...");
-			Console.ReadLine();
 		}
 	}
 }

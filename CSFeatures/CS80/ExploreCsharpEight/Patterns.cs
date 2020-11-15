@@ -18,7 +18,7 @@ namespace ExploreCsharpEight
     {
         decimal CalculateToll(object vehicle);
     }
-    
+
     class TollCalculator_V1 : ITollCalculator
     {
         #region Pattern_CalculateToll
@@ -29,7 +29,7 @@ namespace ExploreCsharpEight
                 Taxi t => 3.50m,
                 Bus b => 5.00m,
                 DeliveryTruck t => 10.00m,
-                {} => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
+                { } => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
                 null => throw new ArgumentNullException(nameof(vehicle))
             };
 
@@ -54,7 +54,7 @@ namespace ExploreCsharpEight
 
                 Bus b => 5.00m,
                 DeliveryTruck t => 10.00m,
-                {} => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
+                { } => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
                 null => throw new ArgumentNullException(nameof(vehicle))
             };
         #endregion
@@ -81,7 +81,7 @@ namespace ExploreCsharpEight
                 Bus _ => 5.00m,
 
                 DeliveryTruck t => 10.00m,
-                {} => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
+                { } => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
                 null => throw new ArgumentNullException(nameof(vehicle))
             };
         #endregion
@@ -111,7 +111,7 @@ namespace ExploreCsharpEight
                 DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
                 DeliveryTruck _ => 10.00m,
 
-                {} => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
+                { } => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
                 null => throw new ArgumentNullException(nameof(vehicle))
             };
         #endregion
@@ -147,7 +147,7 @@ namespace ExploreCsharpEight
                 DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
                 DeliveryTruck t => 10.00m,
 
-                {} => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
+                { } => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
                 null => throw new ArgumentNullException(nameof(vehicle))
             };
         #endregion
@@ -241,11 +241,11 @@ namespace ExploreCsharpEight
 
             ITollCalculator tollCalc = regionName switch
             {
-                "Pattern_CarTaxiOccupancy"      => new TollCalculator_V2() as ITollCalculator,
-                "Pattern_BusOccupancy"          => new TollCalculator_V3() as ITollCalculator,
-                "Pattern_DeliveryTruckWeight"   => new TollCalculator_V4() as ITollCalculator,
-                "Pattern_ChainedPatterns"       => new TollCalculator_V5() as ITollCalculator,
-                _                               => new TollCalculator_V1() as ITollCalculator,
+                "Pattern_CarTaxiOccupancy" => new TollCalculator_V2() as ITollCalculator,
+                "Pattern_BusOccupancy" => new TollCalculator_V3() as ITollCalculator,
+                "Pattern_DeliveryTruckWeight" => new TollCalculator_V4() as ITollCalculator,
+                "Pattern_ChainedPatterns" => new TollCalculator_V5() as ITollCalculator,
+                _ => new TollCalculator_V1() as ITollCalculator,
             };
 
             var soloDriver = new Car();
